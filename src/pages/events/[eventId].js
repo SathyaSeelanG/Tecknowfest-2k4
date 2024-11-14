@@ -47,12 +47,7 @@ const eventDetails = {
     description: "A creative dramatics competition where you can perform a scene from the play."
   }
 };
-const winners = [
-    { teamName: "Team Alpha", members: ["Alice", "Bob", "Charlie"] },
-    { teamName: "Team Beta", members: ["David", "Eva"] },
-    { teamName: "Team Gamma", members: ["Frank", "Grace", "Helen"] },
-    // More teams if needed...
-  ];
+
 export default function EventDetails() {
   const router = useRouter();
   const { eventId } = router.query;
