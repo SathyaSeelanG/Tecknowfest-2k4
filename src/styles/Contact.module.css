@@ -1,0 +1,127 @@
+/* src/styles/Contact.module.css */
+.container {
+    background-color: #ecf0f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem; /* Padding around the entire container */
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    width: 60%;
+    background-color: #f4f6f9;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    gap: 2rem;
+    border: 4px solid #09322d;
+    border-radius: 12px;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #0070f3;
+    font-weight: 600;
+    text-align: center;
+}
+
+.contactHeading {
+    font-size: 1.75rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.contactList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start; /* Align contacts to the left */
+}
+
+.contactListItem {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    width: 45%;  /* Adjust width to fit multiple items on a row */
+    padding: 1rem;
+    /* border: 2px solid #0070f3; */
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for contact items */
+/* .contactListItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+} */
+
+.contactListItem .name {
+    font-weight: bold;
+    color: #333; /* Name in black */
+}
+
+.contactListItem .number {
+    font-weight: bold;
+    color: #bbb; /* Light grey for number */
+}
+
+.contactInfo {
+    font-size: 1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    width: 90%; /* Increase container width on smaller screens */
+    padding: 2rem; /* Adjust padding for better spacing */
+  }
+
+  .contact h2 {
+    font-size: 2rem; /* Reduce font size for mobile */
+  }
+
+  .contactHeading {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  .contactList {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+  }
+
+  .contactListItem {
+    width: 100%; /* Full width for contact items on mobile */
+    padding: 1.2rem; /* Adjust padding for better spacing */
+    margin-bottom: 1rem; /* Add space between contact items */
+  }
+
+  .contactListItem .name, .contactListItem .number {
+    font-size: 1.1rem; /* Adjust font size for better readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact h2 {
+    font-size: 1.75rem; /* Further reduce font size on very small screens */
+  }
+
+  .contactHeading {
+    font-size: 1.3rem; /* Smaller heading for very small screens */
+  }
+
+  .contactListItem {
+    padding: 0.5rem; /* Further reduce padding for smaller screens */
+  }
+
+  .contactListItem .name, .contactListItem .number {
+    font-size: 1rem; /* Adjust font size for very small screens */
+  }
+}

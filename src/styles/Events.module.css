@@ -1,0 +1,184 @@
+/* src/styles/Events.module.css */
+
+.events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem;
+    background-color: #ecf0f3;
+    color: #333;
+  }
+  
+  .events h2 {
+    margin-left: 5rem;
+    font-size: 2.5rem;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .subheading {
+    margin-left: 6rem;
+    font-size: 2.5rem;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .events .category {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 2rem; /* Reduced margin for closer sections */
+  }
+  
+  .events .category h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .eventCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    gap: 1rem; /* Reduced gap between cards */
+    justify-content: center;
+  }
+  
+  .eventCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem; /* Reduced padding */
+    width: 100%;
+    max-width: 450px; /* Reduced width */
+    height: 180px; /* Reduced height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+  }
+  
+  .eventCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .eventLink {
+    text-decoration: none; /* Remove default underline */
+  }
+  
+  .eventLink:hover .eventTitle{
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .eventContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .eventTitle {
+    font-size: 1.5rem; /* Reduced font size */
+    font-weight: 600;
+    color: #0070f3;
+    margin-bottom: 0.5rem;
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .eventLocation {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.25rem;
+    font-style: italic;
+    text-decoration: none; /* Remove underline */
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .events {
+      padding: 3rem 2rem; /* Adjust padding for smaller screens */
+    }
+  
+    .events h2 {
+      font-size: 2rem; /* Reduce font size for smaller screens */
+      margin-left: 2rem; /* Adjust margin */
+    }
+  
+    .subheading {
+      font-size: 2rem; /* Adjust subheading font size */
+      margin-left: 2rem;
+    }
+  
+    .eventCards {
+      grid-template-columns: 1fr; /* Display 1 card per row */
+      gap: 1.5rem; /* Increase the gap for better mobile spacing */
+    }
+  
+    .eventCard {
+      max-width: 90%; /* Further reduce width for mobile */
+      height: 220px; /* Adjust height */
+      padding: 1.8rem; /* Increase padding for better touch targets */
+    }
+  
+    .eventTitle {
+      font-size: 0.25rem; /* Adjust font size for mobile */
+    }
+  
+    .eventLocation {
+      font-size: 0.9rem; /* Adjust location font size */
+    }
+  }
+  
+  /* Additional responsiveness for very small screens (below 480px) */
+  @media (max-width: 480px) {
+    .events {
+      padding: 2rem 1rem; /* Reduce padding for very small screens */
+    }
+  
+    .events h2 {
+      font-size: 1.75rem; /* Adjust font size for very small screens */
+      margin-left: 1rem; /* Adjust margin */
+    }
+  
+    .subheading {
+      font-size: 1.75rem;
+      margin-left: 1rem;
+    }
+  
+    .events .category h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  
+    .eventCards {
+      grid-template-columns: 1fr; /* Display 1 card per row */
+      gap: 1.5rem;
+    }
+  
+    .eventCard {
+      width: 250px;
+      height: 120px; /* Increase height for small screens */
+      padding: 2rem; /* Add more padding for better touch targets */
+      margin: 16px;
+    }
+  
+    .eventTitle {
+      font-size: 1rem; /* Adjust font size for very small screens */
+    }
+  
+    .eventLocation {
+      font-size: 0.85rem; /* Adjust location font size */
+    }
+  }
+  

@@ -1,0 +1,81 @@
+/* src/styles/EventDetails.module.css */
+
+.winners {
+    margin-top: 3rem;
+    text-align: center;
+    margin-bottom: 5rem !important;
+}
+
+/* Table container */
+.tableContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px; /* Increase max-width to control table width */
+    margin: 0 auto;
+}
+
+/* Table styling */
+.winnerTable {
+    width: 100%; /* Makes the table take the full width of its container */
+    border-collapse: collapse;
+    margin-top: 1rem;
+    /* background-color: #f9f9f9; */
+}
+
+.winnerTable th,
+.winnerTable td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #0a0a0a;
+}
+
+.winnerTable th {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+/* Hover effect */
+.winnerTable tr:hover {
+    background-color: #c4bebe; /* Darker grey on hover */
+}
+
+.winnerTable td {
+    font-size: 1rem;
+}
+
+.winnerTable td:first-child {
+    font-weight: bold;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .tableContainer {
+        flex-direction: column; /* Stack the table vertically on smaller screens */
+        max-width: 90%;
+        padding: 0 1rem; /* Add padding for better readability */
+    }
+
+    .winnerTable th,
+    .winnerTable td {
+        padding: 8px; /* Reduce padding on smaller screens */
+        font-size: 0.9rem; /* Slightly smaller font size for mobile */
+    }
+
+    .winnerTable {
+        margin-top: 0; /* Remove top margin for better fit on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .winnerTable th,
+    .winnerTable td {
+        padding: 6px; /* Even smaller padding for very small screens */
+        font-size: 0.8rem; /* Smaller font size */
+    }
+
+    .winners {
+        padding: 1rem;
+        margin-top: 2rem; /* Reduce top margin on very small screens */
+    }
+}

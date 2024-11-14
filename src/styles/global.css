@@ -1,0 +1,18 @@
+/* styles/globals.css or layout.css */
+html, body {
+    height: 100%;  /* Ensure the document takes up the full viewport height */
+    margin: 0;     /* Reset default margin */
+    padding: 0;    /* Reset default padding */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  #__next {
+    height: 100%;  /* Make sure the Next.js root div fills the height */
+  }
+  
+  .layout-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;  /* Ensure the wrapper div takes up the full height */
+  }
+  

@@ -1,0 +1,77 @@
+/* src/styles/Header.module.css */
+
+.header {
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 3rem;
+    height: 2rem; /* Height adjustment */
+    background-color: #fefbfb; /* Light background color */
+    color: #333; /* Text color */
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between; /* Space between name and button */
+    align-items: center;
+    z-index: 1000; /* Ensure the header stays above other content */
+    border-bottom: 2px solid #0b0b0b; /* Bottom border color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+.header .name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333; /* Dark color for name */
+    text-decoration: none; /* Remove underline from the name */
+}
+
+/* Style the register button */
+.header .registerButton {
+    padding: 0.75rem 1.5rem;
+    background-color: black; /* Black button */
+    color: white; /* Text color for button */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.header .registerButton:hover {
+    background-color: #333; /* Darker black on hover */
+}
+
+/* Add some padding to the body or content to avoid it being hidden behind the fixed header */
+.body {
+    padding-top: 7rem; /* Adjust based on header height */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem 2rem; /* Reduce padding for smaller screens */
+        height: 2rem; /* Maintain height */
+        flex-direction: row; /* Keep elements in a row (left-right positioning) */
+        justify-content: space-between; /* Ensure space between name and button */
+    }
+
+    .header .name {
+        font-size: 1.5rem; /* Smaller font size for the name */
+    }
+
+    .header .registerButton {
+        padding: 0.5rem 1rem; /* Adjust button size */
+        font-size: 0.875rem; /* Smaller button text */
+    }
+}
+
+@media (max-width: 480px) {
+    .header .name {
+        font-size: 1.25rem; /* Even smaller font size for extra small screens */
+    }
+
+    .header .registerButton {
+        padding: 0.5rem 1rem; /* Adjust for mobile */
+        font-size: 0.875rem; /* Slightly smaller button text */
+    }
+}
